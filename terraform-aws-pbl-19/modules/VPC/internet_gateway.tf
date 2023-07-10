@@ -7,4 +7,5 @@ resource "aws_internet_gateway" "ig" {
       Name = format("%s-%s-%s!", var.name, aws_vpc.main.id, "IG")
     },
   )
+
 }

@@ -1,4 +1,3 @@
-#-----------------compute/variables.tf------------
 variable "subnets-compute" {
     description = "public subnetes for compute instances"
 }

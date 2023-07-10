@@ -1,4 +1,3 @@
-#------------------Autoscaling/variables.tf-----------------
 variable "ami-web" {
   type        = string
   description = "ami for webservers"

@@ -1,4 +1,3 @@
-#------------VPC/outputs.tf-----------------
 output "public_subnets-1" {
   value       = aws_subnet.public[0].id
   description = "The first public subnet in the subnets"

@@ -1,5 +1,3 @@
-#-----------------------VPC/variables.tf--------
-
 variable "region" {
 }
 
@@ -14,11 +12,6 @@ variable "enable_dns_support" {
 variable "enable_dns_hostnames" {
   type = bool
 }
-
-variable "enable_classiclink" {
-  type = bool
-}
-
 
 variable "preferred_number_of_public_subnets" {
   type = number
@@ -47,10 +40,9 @@ variable "tags" {
 
 variable "name" {
   type    = string
-  default = "ACS"
+  default = "TCS"
 
 }
 variable "environment" {
   default = "true"
 }
-

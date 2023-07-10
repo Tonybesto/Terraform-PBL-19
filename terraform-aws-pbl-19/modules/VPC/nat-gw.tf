@@ -1,16 +1,15 @@
 #------------VPC/nat-gw.tf-------------
 resource "aws_eip" "nat_eip" {
-  domain    = "vpc"
+  domain = "vpc"
   depends_on = [aws_internet_gateway.ig]
 
   tags = merge(
     var.tags,
     {
-      Name = format("%s-EIP-%s", var.name, var.environment)
+      Name = format("%s-EIP", var.name)
     },
   )
 }
-
 
 resource "aws_nat_gateway" "nat" {
   allocation_id = aws_eip.nat_eip.id
@@ -20,7 +19,7 @@ resource "aws_nat_gateway" "nat" {
   tags = merge(
     var.tags,
     {
-      Name = format("%s-Nat-%s", var.name, var.environment)
+      Name = format("%s-Nat", var.name)
     },
   )
 }
